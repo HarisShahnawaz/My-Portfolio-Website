@@ -23,7 +23,7 @@ const About = () => {
             </p>
 
             {/* cards */}
-            <div className='flex flex-col sm:flex-row items-stretch justify-between gap-6'>
+            <div className='flex flex-col sm:flex-row items-stretch justify-between gap-6 mb-8'>
               {profileData.map((data, index) => (
                 <div
                   key={index}
@@ -41,10 +41,21 @@ const About = () => {
                 </div>
               ))}
             </div>
-            <br />
-             <button className='px-8 py-4 bg-zinc-700 text-white rounded-full cursor-pointer  transition duration-300 hover:bg-zinc-900'>
-                    Download Resume
-                  </button>
+
+            {/* buttons */}
+            <div className='flex flex-col sm:flex-row gap-4'>
+              <a href='/resume.pdf' target='_blank' rel='noreferrer'>
+                <button className='px-8 py-4 border border-zinc-700 text-zinc-700 rounded-full cursor-pointer transition duration-300 hover:bg-zinc-100'>
+                  View Resume
+                </button>
+              </a>
+              <a href='/resume.pdf' download='HarisShahnawaz-Resume.pdf'>
+                <button className='px-8 py-4 bg-zinc-700 text-white rounded-full cursor-pointer transition duration-300 hover:bg-zinc-900'>
+                  Download Resume
+                </button>
+              </a>
+            </div>
+
           </div>
 
           {/* image section */}
