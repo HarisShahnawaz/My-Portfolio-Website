@@ -20,29 +20,29 @@ export const navMenu = ['Home', 'Work', 'Skills', 'About', 'Contact']
 
 export const skillsData = [
     {
-        icon: FaMicrochip,
-        title: 'Backend',
-        technologies: ['Python', 'Postgres', 'Redis', 'Next.js']
-    },
-    {
         icon: FaReact,
         title: 'Frontend',
-        technologies: ['React', 'Html', 'Css', 'Tailwindcss']
+        technologies: ['React', 'HTML', 'CSS', 'Tailwindcss', 'JavaScript']
+    },
+    {
+        icon: FaMicrochip,
+        title: 'Backend',
+        technologies: ['Node.js', 'Express', 'REST API']
+    },
+    {
+        icon: FaCode,
+        title: 'Tools',
+        technologies: ['Git', 'GitHub', 'Vite', 'VS Code']
     },
     {
         icon: FaDesktop,
-        title: 'Web',
-        technologies: ['Nginx', 'Linux', 'Wsgi', 'Server']
-    },
-    {
-        icon: FaCode ,
-        title: 'DevOps',
-        technologies: ['Linux', 'Git', 'Github', 'Docker', 'Jenkins', 'CI/CD']
+        title: 'Deployment',
+        technologies: ['Vercel', 'Cloudflare', 'Netlify']
     },
     {
         icon: FaMobile,
-        title: 'Mobile',
-        technologies: ['React Native', 'Android', 'Flutter', 'Java']
+        title: 'Currently Learning',
+        technologies: ['TypeScript', 'Next.js', 'MongoDB']
     },
 ]
 
@@ -81,18 +81,18 @@ export const projectData = [
 
 export const profileData = [
     {
-        icon: FaCode ,
+        icon: FaCode,
         title: 'Language',
-        technologies : ['Python', 'Django', 'Rest', 'React', 'Tailwindcss']
+        technologies: ['JavaScript', 'React', 'Node.js', 'Tailwindcss']
     },
     {
-        icon: FaSchool ,
+        icon: FaSchool,
         title: 'Education',
-        technologies : ['B.Tech in Compuer Science']
+        technologies: ['BS Information Technology From', 'Okara University', '(2022-2026)']
     },
     {
-        icon: FaProjectDiagram ,
+        icon: FaProjectDiagram,
         title: 'Projects',
-        technologies : ['Built more than 25+']
+        technologies: ['Built more than 10+']
     },
 ]

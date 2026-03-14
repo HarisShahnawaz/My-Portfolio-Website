@@ -7,11 +7,11 @@ const Hero = () => {
   <div id='home' className='flex flex-col pt-20 pb-40 lg:pb-10'>
     <div className='max-w-7xl mx-auto px-6 py-8 sm:py-20'>
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
-        <div className='items-center lg:text-left'>
-         <h1 className='text-3xl sm:text-6xl md:text-7xl font-bold mb-6'>
+       <div className='text-center lg:text-left'>
+         <h1 className='text-3xl sm:text-5xl md:text-7xl font-bold mb-6'>
             <span className='text-zinc-700 font-orbitron '>FullStack Developer</span>
             <br />
-        <span className='text-cyan-700 font-orbitron text-4xl'>React & NodeJs</span>
+        <span className='text-cyan-700 font-orbitron text-2xl sm:text-3xl md:text-4xl'>React & NodeJs</span>
           </h1> 
           <p className='text-xl text-zinc-900 mb-6 '>
             I build fast, beautiful websites using React and Node.js.
