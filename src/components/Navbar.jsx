@@ -20,7 +20,7 @@ const Navbar = () => {
                 <a 
                   key={index} 
                   href={`#${item.toLowerCase()}`}
-                  className='text-zinc-600 hover:text-teal-700 transition duration-300'
+                  className='text-zinc-700 hover:text-teal-700 transition duration-300'
                 >
                   {item}
                 </a>
