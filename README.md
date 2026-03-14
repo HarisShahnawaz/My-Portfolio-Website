@@ -1,16 +1,89 @@
-# React + Vite
+# Haris Shahnawaz - Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website built with React.js and Tailwind CSS, showcasing my projects, skills, and experience as a Frontend Web Developer.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
+[View Live](https://my-portfolio-website-eight-ashy.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📸 Preview
+![Portfolio Preview](./public/screenshot.png)
 
-## React Compiler
+## 🛠️ Built With
+- **React.js** - Frontend framework
+- **Tailwind CSS v4** - Styling
+- **Vite** - Build tool
+- **Framer Motion** - Animations
+- **React Icons** - Icon library
+- **React Router DOM** - Routing
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
+- Fully responsive design (mobile, tablet, desktop)
+- Smooth scroll navigation
+- Animated sections with Framer Motion
+- Projects showcase with live demo links
+- Skills section with tech stack
+- About section with downloadable resume
+- Contact form
+- Social media links
 
-## Expanding the ESLint configuration
+## 📂 Project Structure
+```
+src/
+├── assets/
+│   ├── asstes.js       # Data and assets
+│   └── profile.png     # Profile image
+├── components/
+│   ├── Navbar.jsx
+│   ├── Hero.jsx
+│   ├── Work.jsx
+│   ├── Skills.jsx
+│   ├── About.jsx
+│   ├── Contact.jsx
+│   └── Footer.jsx
+└── pages/
+    └── Home.jsx
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js
+- npm
+
+### Installation
+1. Clone the repository
+```bash
+git clone https://github.com/HarisShahnawaz/My-Portfolio-Website.git
+```
+
+2. Navigate to project directory
+```bash
+cd My-Portfolio-Website
+```
+
+3. Install dependencies
+```bash
+npm install
+```
+
+4. Run development server
+```bash
+npm run dev
+```
+
+5. Open browser and visit
+```
+http://localhost:5173
+```
+
+## 📬 Contact
+- **Email:** harishahnawaz97@gmail.com
+- **LinkedIn:** [Haris Shahnawaz](https://www.linkedin.com/in/haris-shahnawaz-670aa8291/)
+- **GitHub:** [HarisShahnawaz](https://github.com/HarisShahnawaz)
+- **Instagram:** [shahnawaz.haris](https://www.instagram.com/shahnawaz.haris/)
+
+## 📄 License
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+⭐ If you like this project, please give it a star on GitHub!
