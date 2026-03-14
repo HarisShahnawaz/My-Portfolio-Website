@@ -4,11 +4,11 @@ import { assets } from '../assets/asstes'
 
 const Hero = () => {
   return (
-    <div id='home' className='min-h-screen flex items-center pt-16'>
-    <div className='max-w-7xl mx-auto px-6 py-20'>
+  <div id='home' className='flex flex-col pt-20 pb-40 lg:pb-10'>
+    <div className='max-w-7xl mx-auto px-6 py-8 sm:py-20'>
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
         <div className='items-center lg:text-left'>
-          <h1 className='text-5xl sm:text-6xl md:text-7xl font-bold  mb-10'>
+         <h1 className='text-3xl sm:text-6xl md:text-7xl font-bold mb-6'>
             <span className='text-zinc-700 font-orbitron '>FullStack Developer</span>
             <br />
         <span className='text-cyan-700 font-orbitron text-4xl'>React & NodeJs</span>
@@ -35,6 +35,14 @@ const Hero = () => {
               <div className='relative w-72 h-72 sm:w-80 sm:h-80 floating'>
                <div className='absolute inset-0 rounded-2xl overflow-hidden border-4 border-slate-600/30 glow'>
                 <img  className='w-full h-full object-cover' src={assets.profileImg} alt="" />
+               </div>
+               <div className='absolute -bottom-6 -right-6 w-32  h-32 rounded-xl border border-slate-600/20 overflow-hidden p-3'>
+                 <div className='w-full h-full items-center justify-center'>
+                   <div className='text-center'>
+                        <div className='text-3xl font-bold  text-white'>2+</div>
+                        <div className='text-sm text-white '>years Exp</div>
+                   </div>
+                 </div>
                </div>
               </div>
              </div>

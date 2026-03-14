@@ -2,6 +2,14 @@
 
 @import "tailwindcss";
 
+@layer base {
+  html, body, #root {
+    overflow-y: auto;
+    height: auto;
+    min-height: 100%;
+  }
+}
+
 body {
   font-family: "Space Grotesk", sans-serif;
 }
@@ -9,15 +17,17 @@ body {
 h1 h2 h3 h4 {
   font-family: "Orbitron", sans-serif;
 }
+
 @keyframes float {
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(0);
   }
 }
+
 .floating {
   animation: float 6s ease-in-out infinite;
 }
-.font-orbitron{
-  font-family:'Orbitron'
+
+.font-orbitron {
+  font-family: 'Orbitron';
 }

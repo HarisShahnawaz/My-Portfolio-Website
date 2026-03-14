@@ -3,7 +3,7 @@ import { navMenu } from '../assets/asstes'
 import { FaArrowRight } from 'react-icons/fa6'
 const Navbar = () => {
   return (
-    <div className='fixed w-full py-4 z-50'>
+   <div className='fixed w-full py-4 z-50 bg-white'>
         <div className='max-w-7xl mx-auto px-6'>
          <div className='flex justify-between items-center'>
             {/*logo*/}
