@@ -6,7 +6,7 @@ A modern, responsive portfolio website built with React.js and Tailwind CSS, sho
 [View Live](https://my-portfolio-website-eight-ashy.vercel.app/)
 
 ## 📸 Preview
-![Portfolio Preview](./public/screenshot.png)
+![Portfolio Preview](./screenshot.png)
 
 ## 🛠️ Built With
 - **React.js** - Frontend framework
