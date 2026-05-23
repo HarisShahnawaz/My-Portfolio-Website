@@ -4,7 +4,7 @@ import fitclubImg from '../assets/fitclub.png'
 import harixaiImg from '../assets/harixai.png'
 import travelImg from '../assets/travel.png'
 import screnshotImg from '../assets/screenshot.png'
-
+import hmastoreImg from '../assets/hmastore.png'
 
 import { FaProjectDiagram } from 'react-icons/fa'
 
@@ -12,6 +12,11 @@ import { FaProjectDiagram } from 'react-icons/fa'
 
 export const assets = {
     profileImg,
+    fitclubImg,
+    harixaiImg,
+    travelImg,
+    screnshotImg,
+    hmastoreImg,
 }
 
 
@@ -49,6 +54,13 @@ export const skillsData = [
 
 
 export const projectData = [
+    {
+  title: 'HmaStore',
+  description: 'A fully featured full-stack e-commerce platform with product listings, shopping cart, user authentication, order management, and an admin dashboard.',
+  image: assets.hmastoreImg,   // add your screenshot to assets
+  tech: ['React', 'Vite', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB', 'JWT'],
+  link: 'https://hma-store-e-commerce-website.vercel.app/'
+},
     {
         title: 'Fit-Club',
         description: 'A responsive fitness & gym website with smooth animations and modern energetic UI.',

@@ -15,13 +15,21 @@ const About = () => {
               <span className='text-teal-800 font-orbitron'>About-</span>
               <span className='font-orbitron'>Me</span>
             </h2>
-            <p className='text-md mb-4 leading-8 text-zinc-700'>
-              I am a results-driven full-stack developer based in Pakistan, specializing in building modern, scalable web applications using React and Node.js. I bring a strong foundation in both frontend and backend development. My approach combines technical expertise with creative design thinking to build applications that are not only functional but also visually stunning.
-            </p>
-            <p className='text-md mb-8 leading-8 text-zinc-700'>
-              I am currently pursuing my BS in Information Technology at Okara University and actively seeking internship opportunities at top Pakistani software houses.
-            </p>
-
+           <p className='text-md mb-4 leading-8 text-zinc-700'>
+  I'm a MERN Stack Developer based in Pakistan, passionate about building
+  full-stack web applications from the ground up. On the frontend, I craft
+  responsive, component-based UIs using <strong>React</strong> and <strong>Tailwind CSS</strong>.
+  On the backend, I design and build scalable <strong>REST APIs</strong> with
+  <strong> Node.js</strong> and <strong>Express</strong>, backed by <strong>MongoDB</strong>
+  for data storage and <strong>JWT</strong> for secure authentication.
+</p>
+<p className='text-md mb-8 leading-8 text-zinc-700'>
+  My latest project, <strong>HmaStore</strong>, is a fully featured e-commerce
+  platform that brings all of these skills together — handling everything from
+  product listings and shopping cart to order management and an admin dashboard.
+  I'm currently pursuing my BS in Information Technology at Okara University
+  and actively seeking internship opportunities at top Pakistani software houses.
+</p>
             {/* cards */}
             <div className='flex flex-col sm:flex-row items-stretch justify-between gap-6 mb-8'>
               {profileData.map((data, index) => (

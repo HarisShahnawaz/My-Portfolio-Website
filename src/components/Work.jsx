@@ -13,7 +13,7 @@ const Work = () => {
            </h2>
            <p className='text-xl max-w-3xl mx-auto'>Building modern web experiences from idea to deployment.</p>
         </div>
-          <div className='grid grid-cols-1 md:grid-cols-4 gap-6 mb-12'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12'>
            {
             projectData.map((project, index) => (
                 <div key={index} className='group rounded overflow-hidden hover:shadow-lg transition cursor-pointer border border-gray-200 hover:-translate-y-1 duration-300'>
