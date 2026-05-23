@@ -5,7 +5,7 @@ import harixaiImg from '../assets/harixai.png'
 import travelImg from '../assets/travel.png'
 import screnshotImg from '../assets/screenshot.png'
 import hmastoreImg from '../assets/hmastore.png'
-
+import universityImg from '../assets/university.png'
 import { FaProjectDiagram } from 'react-icons/fa'
 
 
@@ -17,6 +17,7 @@ export const assets = {
     travelImg,
     screnshotImg,
     hmastoreImg,
+    universityImg,
 }
 
 
@@ -61,6 +62,20 @@ export const projectData = [
   tech: ['React', 'Vite', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB', 'JWT'],
   link: 'https://hma-store-e-commerce-website.vercel.app/'
 },
+ {
+        title: 'HarixAi',
+        description: 'A Gemini AI clone with real AI responses, prompt suggestions and chat history.',
+        image: harixaiImg,
+        tech: ['geminiapi', 'CSS', 'Javascript', 'React'],
+          link: 'https://gemini-clone-app-seven.vercel.app/'
+    },
+    {
+  title: 'University Website',
+  description: 'A clean and responsive university website frontend with smooth navigation and modern UI.',
+  image: assets.universityImg,
+  tech: ['HTML', 'CSS', 'JavaScript', 'GitHub Pages'],
+  link: 'https://harisshahnawaz.github.io/university-website-frontend/'
+},
     {
         title: 'Fit-Club',
         description: 'A responsive fitness & gym website with smooth animations and modern energetic UI.',
@@ -82,13 +97,7 @@ export const projectData = [
         tech: ['React', 'Tailwindcss', 'Javascript'],
           link: 'https://harisshahnawaz.github.io/e-commerce-website-frontend/'
     },
-    {
-        title: 'HarixAi',
-        description: 'A Gemini AI clone with real AI responses, prompt suggestions and chat history.',
-        image: harixaiImg,
-        tech: ['geminiapi', 'CSS', 'Javascript', 'React'],
-          link: 'https://gemini-clone-app-seven.vercel.app/'
-    }
+   
 ]
 
 export const profileData = [
