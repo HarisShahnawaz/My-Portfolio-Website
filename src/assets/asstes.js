@@ -99,21 +99,20 @@ export const projectData = [
     },
    
 ]
-
 export const profileData = [
-    {
-        icon: FaCode,
-        title: 'Language',
-        technologies: ['JavaScript', 'React', 'Node.js', 'Tailwindcss']
-    },
-    {
-        icon: FaSchool,
-        title: 'Education',
-        technologies: ['BS Information Technology From', 'Okara University', '(2022-2026)']
-    },
-    {
-        icon: FaProjectDiagram,
-        title: 'Projects',
-        technologies: ['Built more than 10+']
-    },
+  {
+    icon: FaCode,
+    title: 'Tech Stack',
+    technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS']
+  },
+  {
+    icon: FaSchool,
+    title: 'Education',
+    technologies: ['BS Information Technology', 'University of Okara', '2022 – 2026']
+  },
+  {
+    icon: FaProjectDiagram,
+    title: 'Projects',
+    technologies: ['10+ Projects Built', 'Frontend & Full-Stack', 'Deployed & Live']
+  },
 ]

@@ -92,8 +92,8 @@ const Hero = () => {
               {/* Experience badge */}
               <div className='absolute -bottom-6 -right-6 w-32 h-32 rounded-xl border border-slate-600/20 overflow-hidden p-3 flex items-center justify-center'>
                 <div className='text-center'>
-                  <div className='text-3xl font-bold text-white'>1+</div>
-                  <div className='text-sm text-zinc-300'>Years Exp</div>
+                  <div className='text-3xl font-bold text-black'>1+</div>
+                  <div className='text-sm text-black'>Years Exp</div>
                 </div>
               </div>
 
