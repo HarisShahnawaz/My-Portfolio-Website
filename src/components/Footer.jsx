@@ -24,7 +24,7 @@ const Footer = () => {
               <FaGithub className='text-xl text-zinc-400 hover:text-white transition duration-300'/>
             </a>
             <a href='https://www.linkedin.com/in/haris-shahnawaz-670aa8291/' target='_blank' rel='noreferrer'
-              className='p-2 rounded-full border border-zinc-700 hover:border-blue-500 hover:bg-zinc-800 transition duration-300'>
+              className='p-2 rounded-full border border-zinc-700 hover:border-blue-400 hover:bg-zinc-800 transition duration-300'>
               <FaLinkedin className='text-xl text-zinc-400 hover:text-blue-400 transition duration-300'/>
             </a>
             <a href='https://www.instagram.com/shahnawaz.haris/' target='_blank' rel='noreferrer'
