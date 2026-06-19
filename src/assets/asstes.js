@@ -6,6 +6,7 @@ import travelImg from '../assets/travel.png'
 import screnshotImg from '../assets/screenshot.png'
 import hmastoreImg from '../assets/hmastore.png'
 import universityImg from '../assets/university.png'
+import teyzixImg from '../assets/home.png'
 import { FaProjectDiagram } from 'react-icons/fa'
 
 
@@ -18,64 +19,64 @@ export const assets = {
     screnshotImg,
     hmastoreImg,
     universityImg,
+    teyzixImg
 }
 
 
 export const navMenu = ['Home', 'Work', 'Skills', 'About', 'Contact']
 
 
-export const skillsData = [
+
+  export const skillsData = [
     {
         icon: FaReact,
         title: 'Frontend',
-        technologies: ['React', 'HTML', 'CSS', 'Tailwindcss', 'JavaScript']
+        technologies: ['React', 'HTML', 'CSS', 'Tailwindcss', 'JavaScript', 'React Router DOM', 'React Icons']
     },
     {
         icon: FaMicrochip,
         title: 'Backend',
-        technologies: ['Node.js', 'Express', 'REST API']
+        technologies: ['Node.js', 'Express', 'MongoDB', 'MongoDB Atlas', 'JWT', 'REST API', 'Socket.io', 'Multer']
     },
     {
         icon: FaCode,
         title: 'Tools',
-        technologies: ['Git', 'GitHub', 'Vite', 'VS Code']
+        technologies: ['Git', 'GitHub', 'Vite', 'VS Code', 'Postman']
     },
     {
         icon: FaDesktop,
-        title: 'Deployment',
-        technologies: ['Vercel', 'Cloudflare', 'Netlify']
+        title: 'Deployment & Cloud',
+        technologies: ['Vercel', 'Cloudflare', 'Render', 'Netlify']
     },
     {
         icon: FaMobile,
-        title: 'Currently Learning',
-        technologies: ['TypeScript', 'Next.js', 'MongoDB']
+        title: 'Frameworks & Scale',
+        technologies: ['Next.js', 'TypeScript', 'Agentic AI']
     },
 ]
-
-
 
 export const projectData = [
     {
   title: 'HmaStore',
   description: 'A fully featured full-stack e-commerce platform with product listings, shopping cart, user authentication, order management, and an admin dashboard.',
-  image: assets.hmastoreImg,   // add your screenshot to assets
+  image: hmastoreImg,  
   tech: ['React', 'Vite', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB', 'JWT'],
   link: 'https://hma-store-e-commerce-website.vercel.app/'
 },
- {
+{
+      title: 'TeyzixMarket',
+      description: 'A multi-vendor service marketplace with standalone seller dashboards, dynamic client-provider chat systems, and a custom built-in AI assistant guide.',
+      image: teyzixImg,
+      tech: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB', 'JWT'],
+      link: 'https://teyzix-marketplace-theta.vercel.app/' 
+    },
+{
         title: 'HarixAi',
-        description: 'A Gemini AI clone with real AI responses, prompt suggestions and chat history.',
+        description: 'An advanced conversational Gemini AI clone featuring state-driven real-time AI response rendering, intelligent dynamic prompt suggestions, and a structured local chat history system for seamless contextual persistence.',
         image: harixaiImg,
         tech: ['geminiapi', 'CSS', 'Javascript', 'React'],
           link: 'https://gemini-clone-app-seven.vercel.app/'
     },
-    {
-  title: 'University Website',
-  description: 'A clean and responsive university website frontend with smooth navigation and modern UI.',
-  image: assets.universityImg,
-  tech: ['HTML', 'CSS', 'JavaScript', 'GitHub Pages'],
-  link: 'https://harisshahnawaz.github.io/university-website-frontend/'
-},
     {
         title: 'Fit-Club',
         description: 'A responsive fitness & gym website with smooth animations and modern energetic UI.',
