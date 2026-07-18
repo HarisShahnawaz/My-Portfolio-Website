@@ -113,7 +113,7 @@ export const projectData = [
     description: 'A full-stack web application for managing vendors, creating quotation requests, and comparing vendor proposals through a centralized platform.',
     image: vendorImg,
     tech: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB'],
-    link: 'https://github.com/HarisShahnawaz/vendor-management-system'
+    link: 'https://vendor-management-system-six-pink.vercel.app/'
   },
 
 
@@ -123,7 +123,7 @@ export const projectData = [
     description: 'A responsive student system for registration, attendance tracking, marks/results calculation, and visual dashboard analytics.',
     image: studentImg,
     tech: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB', 'Chart.js'],
-    link: 'https://github.com/HarisShahnawaz/Student-Management-System'
+    link: 'https://student-management-system-dusky-pi.vercel.app/'
   },
 
 ]
