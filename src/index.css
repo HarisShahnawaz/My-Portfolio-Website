@@ -2,6 +2,56 @@
 
 @import "tailwindcss";
 
+:root, [data-theme='light'] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb; /* bg-zinc-50/50 */
+  --bg-card: #ffffff;
+  --text-primary: #18181b; /* text-zinc-900 / slate-800 */
+  --text-secondary: #52525b; /* text-zinc-600 */
+  --text-muted: #71717a; /* text-zinc-500 */
+  --border-color: #e4e4e7; /* border-zinc-200 / border-gray-200 */
+  --border-focus: #14b8a6; /* border-teal-500 */
+  --accent-color: #0f766e; /* text-teal-800 / teal-700 / teal-600 */
+  --accent-hover: #115e59; /* teal-800 */
+  --button-bg: #27272a; /* bg-zinc-800 */
+  --button-hover: #09090b; /* bg-black */
+  --button-text: #f8fafc; /* text-slate-200 */
+}
+
+[data-theme='dark'], .dark {
+  --bg-primary: #09090b; /* zinc-950 */
+  --bg-secondary: #18181b; /* zinc-900 */
+  --bg-card: #18181b; /* zinc-900 */
+  --text-primary: #f4f4f5; /* zinc-100 */
+  --text-secondary: #a1a1aa; /* zinc-400 */
+  --text-muted: #71717a; /* zinc-500 */
+  --border-color: #27272a; /* border-zinc-800 */
+  --border-focus: #2dd4bf; /* border-teal-400 */
+  --accent-color: #2dd4bf; /* teal-400 */
+  --accent-hover: #5eead4; /* teal-300 */
+  --button-bg: #f4f4f5; /* zinc-100 */
+  --button-hover: #ffffff; /* white */
+  --button-text: #09090b; /* zinc-950 */
+}
+
+@theme {
+  --color-theme-bg: var(--bg-primary);
+  --color-theme-bg-sec: var(--bg-secondary);
+  --color-theme-card: var(--bg-card);
+  --color-theme-text: var(--text-primary);
+  --color-theme-text-sec: var(--text-secondary);
+  --color-theme-text-muted: var(--text-muted);
+  --color-theme-border: var(--border-color);
+  --color-theme-border-focus: var(--border-focus);
+  --color-theme-accent: var(--accent-color);
+  --color-theme-accent-hover: var(--accent-hover);
+  --color-theme-btn: var(--button-bg);
+  --color-theme-btn-hover: var(--button-hover);
+  --color-theme-btn-text: var(--button-text);
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer base {
   html, body, #root {
     overflow-y: auto;
@@ -13,6 +63,8 @@
 
 body {
   font-family: "Space Grotesk", sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
 }
 
 h1 h2 h3 h4 {
@@ -32,3 +84,40 @@ h1 h2 h3 h4 {
 .font-orbitron {
   font-family: 'Orbitron';
 }
+
+/* Theme color transition rules */
+html,
+body,
+header,
+nav,
+div,
+section,
+footer,
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+button,
+input,
+textarea,
+svg {
+  transition: color 250ms ease, background-color 250ms ease, border-color 250ms ease, box-shadow 250ms ease;
+}
+
+/* Respect user prefers-reduced-motion OS setting */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+}

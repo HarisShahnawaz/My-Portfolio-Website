@@ -6,18 +6,24 @@ import Skills from "../components/Skills";
 import About from "../components/About";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import { motion } from "framer-motion";
 
 const Home = () => {
-  return(
-     <div>
-      <Navbar/>
-      <Hero/>
-      <Work/>
-      <Skills/>
-      <About/>
-      <Contact/>
-      <Footer/>
-     </div>
-  )
-}
-export default Home
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    >
+      <Navbar />
+      <Hero />
+      <Work />
+      <Skills />
+      <About />
+      <Contact />
+      <Footer />
+    </motion.div>
+  );
+};
+export default Home;
+
