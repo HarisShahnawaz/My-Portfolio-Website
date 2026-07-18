@@ -71,7 +71,7 @@ export const projectData = [
     description: 'A full-stack community marketplace where neighbors can buy & sell products, hire skilled professionals, and chat in real time — all within a trusted, review-driven community platform.',
     image: communityImg,
     tech: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB', 'Socket.io'],
-    link: 'https://github.com/HarisShahnawaz/smart-community-marketplace'
+    link: 'https://smart-community-service-market-plac.vercel.app/'
   },
   {
     title: 'TeyzixMarket',
