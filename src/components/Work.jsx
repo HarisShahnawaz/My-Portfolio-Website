@@ -1,14 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaArrowRight } from 'react-icons/fa6'
 import { projectData } from '../assets/asstes'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1
+      staggerChildren: 0.08
     }
   }
 }
@@ -23,6 +23,10 @@ const cardVariants = {
 }
 
 const Work = () => {
+  const [showAll, setShowAll] = useState(false)
+
+  const visibleProjects = showAll ? projectData : projectData.slice(0, 6)
+
   return (
     <div id='work' className='py-20'>
       <div className='max-w-7xl mx-auto px-6 py-6'>
@@ -48,50 +52,67 @@ const Work = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12'
+          className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'
         >
-          {
-            projectData.map((project, index) => (
-                <motion.div 
-                  key={index} 
-                  variants={cardVariants}
-                  whileHover={{ scale: 1.025, y: -6 }}
-                  className='group rounded overflow-hidden shadow-xs hover:shadow-md cursor-pointer border border-theme-border flex flex-col bg-theme-card transition-all duration-200 ease-out'
-                >
-                    <div className='relative flex items-center justify-center overflow-hidden border-b border-theme-border/60 bg-theme-bg-sec'> 
-                      <img className='w-full h-48 object-cover group-hover:scale-[1.04] transition-transform duration-300' src={project.image} alt={project.title} />
-                    </div>
-                    {/* Added text-center, flex, and items-center to make everything perfectly middle-aligned */}
-                    <div className='p-6 flex flex-col items-center text-center flex-grow'>
-                      <h3 className='text-xl font-bold mb-2 font-orbitron text-theme-text'>{project.title}</h3>
-                      <p className='text-theme-text-sec text-sm leading-relaxed flex-grow'>{project.description}</p>
-                      
-                      {/* Added justify-center so the badges sit dead-center */}
-                      <div className='flex flex-wrap justify-center gap-2 mt-4 w-full'>
-                        {project.tech.map((language, index) => (
-                          <span key={index} className='px-3 py-1 bg-theme-accent/10 border border-theme-accent/15 text-theme-accent text-xs font-semibold rounded-full'>
-                            {language}
-                          </span>
-                        ))}
+          <AnimatePresence mode='popLayout'>
+            {
+              visibleProjects.map((project) => (
+                  <motion.div 
+                    key={project.title} 
+                    variants={cardVariants}
+                    layout
+                    initial="hidden"
+                    animate="visible"
+                    exit={{ opacity: 0, scale: 0.95 }}
+                    whileHover={{ scale: 1.025, y: -6 }}
+                    className='group rounded overflow-hidden shadow-xs hover:shadow-md cursor-pointer border border-theme-border flex flex-col bg-theme-card transition-all duration-200 ease-out'
+                  >
+                      <div className='relative flex items-center justify-center overflow-hidden border-b border-theme-border/60 bg-theme-bg-sec'> 
+                        <img className='w-full h-48 object-cover group-hover:scale-[1.04] transition-transform duration-300' src={project.image} alt={project.title} />
                       </div>
-                      
-                      {/* View Project Button */}
-                      <a 
-                        href={project.link} 
-                        target='_blank' 
-                        rel='noreferrer'
-                        className='flex items-center gap-2 mt-5 text-sm font-bold text-theme-accent hover:text-theme-accent-hover transition duration-300'
-                      >
-                        View Project <FaArrowRight className='text-xs'/>
-                      </a>
-                    </div>
-                </motion.div>
-            ))
-          }
+                      <div className='p-6 flex flex-col items-center text-center flex-grow'>
+                        <h3 className='text-xl font-bold mb-2 font-orbitron text-theme-text'>{project.title}</h3>
+                        <p className='text-theme-text-sec text-sm leading-relaxed flex-grow'>{project.description}</p>
+                        
+                        <div className='flex flex-wrap justify-center gap-2 mt-4 w-full'>
+                          {project.tech.map((language, idx) => (
+                            <span key={idx} className='px-3 py-1 bg-theme-accent/10 border border-theme-accent/15 text-theme-accent text-xs font-semibold rounded-full'>
+                              {language}
+                            </span>
+                          ))}
+                        </div>
+                        
+                        <a 
+                          href={project.link} 
+                          target='_blank' 
+                          rel='noreferrer'
+                          className='flex items-center gap-2 mt-5 text-sm font-bold text-theme-accent hover:text-theme-accent-hover transition duration-300'
+                        >
+                          View Project <FaArrowRight className='text-xs'/>
+                        </a>
+                      </div>
+                  </motion.div>
+              ))
+            }
+          </AnimatePresence>
         </motion.div>
+
+        {/* See More Button */}
+        {projectData.length > 6 && (
+          <div className='flex justify-center mt-12'>
+            <button
+              onClick={() => setShowAll(prev => !prev)}
+              className='px-10 py-4 bg-theme-btn text-theme-btn-text hover:bg-theme-btn-hover rounded-full font-semibold shadow-xs hover:scale-[1.03] hover:shadow-md transition-all duration-200 cursor-pointer flex items-center gap-2 border border-theme-border/20'
+            >
+              {showAll ? 'Show Less' : 'See More'}
+              <FaArrowRight className={`text-sm transition-transform duration-300 ${showAll ? '-rotate-90' : 'rotate-0'}`} />
+            </button>
+          </div>
+        )}
+
       </div>
     </div>
   )
 }
 
-export default Work
+export default Work

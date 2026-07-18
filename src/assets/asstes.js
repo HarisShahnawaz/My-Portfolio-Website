@@ -8,8 +8,8 @@ import hmastoreImg from '../assets/hmastore.png'
 import universityImg from '../assets/university.png'
 import teyzixImg from '../assets/home.png'
 import communityImg from '../assets/community.png'
-import collaborativeImg from '../assets/collaborative.png'
-import agileflowImg from '../assets/agileflow.png'
+import studentImg from '../assets/student.png'
+import vendorImg from '../assets/vendor.png'
 import { FaProjectDiagram } from 'react-icons/fa'
 
 
@@ -102,25 +102,25 @@ export const projectData = [
           link: 'https://harisshahnawaz.github.io/e-commerce-website-frontend/'
     },
     {
-        title: 'CommunityMarket',
-        description: 'A platform enabling local community members to buy, sell, or trade goods/services with dynamic client-provider maps and real-time chat.',
+        title: 'Smart Community',
+        description: 'A full-stack community marketplace where neighbors can buy & sell products, hire skilled professionals, and chat in real time — all within a trusted, review-driven community platform.',
         image: communityImg,
         tech: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB', 'Socket.io'],
         link: 'https://github.com/HarisShahnawaz/smart-community-marketplace'
     },
     {
-        title: 'DevSync Editor',
-        description: 'A real-time collaborative workspace for developers featuring a live-updating code editor, voice calls, and a built-in terminal simulator.',
-        image: collaborativeImg,
-        tech: ['React', 'Node.js', 'Socket.io', 'Monaco Editor', 'Express', 'WebRTC'],
-        link: 'https://github.com/HarisShahnawaz/devsync-editor'
+        title: 'Vendor Management',
+        description: 'A full-stack web application for managing vendors, creating quotation requests, and comparing vendor proposals through a centralized platform.',
+        image: vendorImg,
+        tech: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB'],
+        link: 'https://github.com/HarisShahnawaz/vendor-management-system'
     },
     {
-        title: 'AgileFlow Board',
-        description: 'A productivity application featuring interactive drag-and-drop task boards, sprint planning analytics, and collaborative team chat.',
-        image: agileflowImg,
-        tech: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB', 'Dnd-kit'],
-        link: 'https://github.com/HarisShahnawaz/agileflow-board'
+        title: 'Student Management',
+        description: 'A responsive student system for registration, attendance tracking, marks/results calculation, and visual dashboard analytics.',
+        image: studentImg,
+        tech: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB', 'Chart.js'],
+        link: 'https://github.com/HarisShahnawaz/Student-Management-System'
     },
    
 ]
