@@ -14,20 +14,20 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.35, ease: 'easeOut' }}
-          className='text-center mb-16'
+          className='mb-14'
         >
           <h2 className='text-4xl md:text-5xl font-bold mb-4'>
             <span className='text-theme-accent font-orbitron'>About-</span>
             <span className='font-orbitron text-theme-text'>Me</span>
           </h2>
-          <div className='w-16 h-1 bg-theme-accent mx-auto rounded-full'></div>
+          <div className='w-16 h-1 bg-theme-accent rounded-full'></div>
         </motion.div>
 
         {/* Content Grid */}
-        <div className='grid grid-cols-1 lg:grid-cols-12 gap-12 items-start'>
+        <div className='grid grid-cols-1 lg:grid-cols-12 gap-14 items-start'>
           
           {/* Text Details & Timeline - Left Side */}
-          <div className='lg:col-span-7 space-y-6'>
+          <div className='lg:col-span-8 space-y-6'>
             <motion.h3 
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -170,7 +170,7 @@ const About = () => {
           </div>
 
           {/* Code Snippet Card & Stats - Right Side */}
-          <div className='lg:col-span-5 space-y-6'>
+          <div className='lg:col-span-4 space-y-6'>
             {/* Code Snippet Card */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -187,7 +187,7 @@ const About = () => {
                 </div>
                 <span className='text-zinc-500 text-[10px]'>developer.json</span>
               </div>
-              <pre className='text-teal-400 overflow-x-auto select-none'>
+              <pre className='text-teal-400 whitespace-pre-wrap select-none break-words'>
                 <code>
 {`{
   "name": "Haris Shahnawaz",

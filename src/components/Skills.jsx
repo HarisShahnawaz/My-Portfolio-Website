@@ -32,18 +32,18 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.4 }}
-          className='text-center mb-16'
+          className='mb-14'
         >
-          <h2 className='text-4xl sm:text-5xl font-bold mb-4 font-orbitron text-theme-text'>
+          <h2 className='text-4xl sm:text-5xl font-bold mb-3 font-orbitron text-theme-text'>
             <span className='text-theme-accent font-orbitron'>Tech-</span>Stack
           </h2>
-          <p className='text-lg text-theme-text-sec max-w-2xl mx-auto font-medium'>
+          <p className='text-lg text-theme-text-sec font-medium'>
             A collection of tools, libraries, and frameworks that I use to bring ideas to life.
           </p>
         </motion.div>
 
         {/* Category sections */}
-        <div className='space-y-12'>
+        <div className='space-y-10'>
           {techStackData.map((categoryGroup, catIndex) => (
             <motion.div 
               key={catIndex}
@@ -62,7 +62,7 @@ const Skills = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-100px" }}
-                className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4'
+                className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3'
               >
                 {categoryGroup.skills.map((skill, idx) => {
                   const Icon = skill.icon;
@@ -71,12 +71,12 @@ const Skills = () => {
                       key={idx}
                       variants={itemVariants}
                       whileHover={{ scale: 1.05, y: -2 }}
-                      className='flex items-center gap-3 p-4 bg-theme-card border border-theme-border rounded-xl shadow-xs hover:border-theme-border-focus hover:shadow-xs transition-all duration-150 cursor-default'
+                      className='flex items-center gap-2.5 p-3 bg-theme-card border border-theme-border rounded-lg shadow-xs hover:border-theme-border-focus hover:shadow-xs transition-all duration-150 cursor-default'
                     >
-                      <div className='text-2xl text-theme-accent flex-shrink-0'>
+                      <div className='text-xl text-theme-accent flex-shrink-0'>
                         <Icon />
                       </div>
-                      <span className='text-sm font-semibold text-theme-text truncate'>
+                      <span className='text-xs font-semibold text-theme-text truncate'>
                         {skill.name}
                       </span>
                     </motion.div>

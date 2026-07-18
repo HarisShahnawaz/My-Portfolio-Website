@@ -37,13 +37,13 @@ const Work = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.4 }}
-          className='mb-16 text-center'
+          className='mb-16'
         > 
-            <h2 className='text-4xl sm:text-5xl font-bold text-theme-text mb-6 font-orbitron'>
+            <h2 className='text-4xl sm:text-5xl font-bold text-theme-text mb-4 font-orbitron'>
               Featured-
               <span className='text-theme-accent font-orbitron'>Projects</span>
             </h2>
-            <p className='text-xl text-theme-text-sec max-w-3xl mx-auto'>Building modern web experiences from idea to deployment.</p>
+            <p className='text-xl text-theme-text-sec'>Building modern web experiences from idea to deployment.</p>
         </motion.div>
         
         {/* Project Grid */}
