@@ -17,9 +17,10 @@ const Home = () => {
     >
       <Navbar />
       <Hero />
+      <About />
       <Work />
       <Skills />
-      <About />
+
       <Contact />
       <Footer />
     </motion.div>

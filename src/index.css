@@ -55,6 +55,7 @@
 @layer base {
   html, body, #root {
     overflow-y: auto;
+    overflow-x: hidden;
     height: auto;
     min-height: 100%;
     scroll-behavior: smooth;

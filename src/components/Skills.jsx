@@ -1,5 +1,5 @@
 import React from 'react'
-import { skillsData } from '../assets/asstes'
+import { techStackData } from '../assets/techStack'
 import { motion } from 'framer-motion'
 
 const containerVariants = {
@@ -7,17 +7,17 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.08
+      staggerChildren: 0.05
     }
   }
 }
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 15 },
   visible: { 
     opacity: 1, 
     y: 0,
-    transition: { duration: 0.35, ease: 'easeOut' }
+    transition: { duration: 0.3, ease: 'easeOut' }
   }
 }
 
@@ -35,56 +35,62 @@ const Skills = () => {
           className='text-center mb-16'
         >
           <h2 className='text-4xl sm:text-5xl font-bold mb-4 font-orbitron text-theme-text'>
-            <span className='text-theme-accent font-orbitron'>Technical-</span>Skills
+            <span className='text-theme-accent font-orbitron'>Tech-</span>Stack
           </h2>
-          <p className='text-lg text-theme-text-sec max-w-2xl mx-auto'>
-            Mastering the tools that power modern web experiences
+          <p className='text-lg text-theme-text-sec max-w-2xl mx-auto font-medium'>
+            A collection of tools, libraries, and frameworks that I use to bring ideas to life.
           </p>
         </motion.div>
 
-        {/* Skills Grid */}
-        <motion.div 
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5'
-        >
-          {skillsData.map((skill, index) => (
-            <motion.div
-              key={index}
-              variants={itemVariants}
-              whileHover={{ scale: 1.03, y: -4 }}
-              className='group p-6 bg-theme-card border border-theme-border rounded-xl text-center cursor-pointer transition-all duration-200 hover:border-theme-border-focus hover:shadow-xs'
+        {/* Category sections */}
+        <div className='space-y-12'>
+          {techStackData.map((categoryGroup, catIndex) => (
+            <motion.div 
+              key={catIndex}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.4, delay: catIndex * 0.05 }}
+              className='space-y-5'
             >
-              {/* Icon circle */}
-              <div className='w-14 h-14 mx-auto rounded-full flex items-center justify-center bg-theme-accent/10 border border-theme-accent/15 mb-4 group-hover:bg-theme-accent/20 transition-colors duration-300'>
-                <skill.icon className='w-7 h-7 text-theme-accent' />
-              </div>
-
-              {/* Title */}
-              <h3 className='text-sm font-bold text-theme-text mb-3'>
-                {skill.title}
+              <h3 className='text-lg font-bold text-theme-text border-l-4 border-theme-accent pl-3 font-orbitron uppercase tracking-wider'>
+                {categoryGroup.category}
               </h3>
-
-              {/* Technologies */}
-              <div className='flex flex-wrap justify-center gap-1.5'>
-                {skill.technologies.map((tech, i) => (
-                  <span
-                    key={i}
-                    className='text-[10px] px-2 py-0.5 bg-theme-accent/10 text-theme-accent rounded-full border border-theme-accent/15'
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
+              
+              <motion.div 
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+                className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4'
+              >
+                {categoryGroup.skills.map((skill, idx) => {
+                  const Icon = skill.icon;
+                  return (
+                    <motion.div
+                      key={idx}
+                      variants={itemVariants}
+                      whileHover={{ scale: 1.05, y: -2 }}
+                      className='flex items-center gap-3 p-4 bg-theme-card border border-theme-border rounded-xl shadow-xs hover:border-theme-border-focus hover:shadow-xs transition-all duration-150 cursor-default'
+                    >
+                      <div className='text-2xl text-theme-accent flex-shrink-0'>
+                        <Icon />
+                      </div>
+                      <span className='text-sm font-semibold text-theme-text truncate'>
+                        {skill.name}
+                      </span>
+                    </motion.div>
+                  )
+                })}
+              </motion.div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
       </div>
     </div>
   )
 }
 
-export default Skills
+export default Skills
+

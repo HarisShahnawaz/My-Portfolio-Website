@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { navMenu } from '../assets/asstes'
-import { FaArrowRight, FaSun, FaMoon } from 'react-icons/fa6'
+import { FaArrowRight, FaSun, FaMoon, FaBars, FaXmark } from 'react-icons/fa6'
 import { useTheme } from '../context/ThemeContext'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme()
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
    <div className='fixed w-full py-4 z-50 bg-theme-bg/85 backdrop-blur-md border-b border-theme-border/50 shadow-sm'>
@@ -36,7 +38,7 @@ const Navbar = () => {
               <button
                 onClick={toggleTheme}
                 aria-label="Toggle Theme"
-                className='p-3.5 border border-theme-border rounded-full cursor-pointer text-theme-text-sec hover:text-theme-accent hover:border-theme-accent hover:scale-[1.03] transition-all duration-200 flex items-center justify-center bg-theme-bg-sec shadow-xs'
+                className='p-3 border border-theme-border rounded-full cursor-pointer text-theme-text-sec hover:text-theme-accent hover:border-theme-accent hover:scale-[1.03] transition-all duration-200 flex items-center justify-center bg-theme-bg-sec shadow-xs w-11 h-11'
               >
                 {theme === 'dark' ? (
                   <FaSun className='text-yellow-400 text-lg' />
@@ -45,18 +47,61 @@ const Navbar = () => {
                 )}
               </button>
 
-              <a href='/resume.pdf' target='_blank' rel='noreferrer'>
-                <button className='px-6 md:px-8 py-3.5 border border-theme-border rounded-full flex items-center gap-2 cursor-pointer text-theme-text-sec hover:text-theme-text hover:bg-theme-bg-sec hover:scale-[1.03] transition-all duration-200 shadow-xs font-semibold'>
+              <a href='/resume.pdf' target='_blank' rel='noreferrer' className='hidden sm:block'>
+                <button className='px-6 md:px-8 py-3 border border-theme-border rounded-full flex items-center gap-2 cursor-pointer text-theme-text-sec hover:text-theme-text hover:bg-theme-bg-sec hover:scale-[1.03] transition-all duration-200 shadow-xs font-semibold min-h-[44px]'>
                   Resume
                   <FaArrowRight className='text-sm'/>
                 </button>
               </a>
+
+              {/* Hamburger Toggle */}
+              <button
+                onClick={() => setIsMenuOpen(prev => !prev)}
+                className='md:hidden p-3 border border-theme-border rounded-full cursor-pointer text-theme-text-sec hover:text-theme-accent hover:scale-[1.03] transition-all duration-200 flex items-center justify-center bg-theme-bg-sec shadow-xs w-11 h-11'
+                aria-label="Toggle Menu"
+              >
+                {isMenuOpen ? <FaXmark className='text-lg' /> : <FaBars className='text-lg' />}
+              </button>
             </div>
 
          </div>
         </div>
+
+        {/* Mobile Dropdown Drawer */}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.2, ease: 'easeInOut' }}
+              className='md:hidden absolute top-[77px] left-0 w-full bg-theme-bg border-b border-theme-border shadow-md overflow-hidden z-40'
+            >
+              <div className='flex flex-col px-6 py-6 space-y-3'>
+                {navMenu.map((item, index) => (
+                  <a 
+                    key={index} 
+                    href={`#${item.toLowerCase()}`}
+                    onClick={() => setIsMenuOpen(false)}
+                    className='text-theme-text-sec hover:text-theme-accent font-semibold py-2.5 text-lg border-b border-theme-border/30 last:border-b-0 min-h-[44px] flex items-center transition-colors duration-200'
+                  >
+                    {item}
+                  </a>
+                ))}
+                
+                <a href='/resume.pdf' target='_blank' rel='noreferrer' className='sm:hidden pt-2'>
+                  <button className='w-full py-3.5 border border-theme-border rounded-full flex items-center justify-center gap-2 cursor-pointer text-theme-text-sec hover:text-theme-text hover:bg-theme-bg-sec font-semibold min-h-[44px] shadow-xs'>
+                    Resume
+                    <FaArrowRight className='text-sm'/>
+                  </button>
+                </a>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
     </div>
   )
 }
 
-export default Navbar
+export default Navbar
+
