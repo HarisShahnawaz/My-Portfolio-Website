@@ -6,7 +6,7 @@ const contactInfo = [
   {
     icon: FaEnvelope,
     label: 'Email',
-    value: 'harisshahnawaz097@gmail.com',
+    value: 'harisshahnawaz97@gmail.com',
     href: 'mailto:harisshahnawaz097@gmail.com'
   },
   {
