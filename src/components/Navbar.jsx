@@ -8,6 +8,20 @@ const Navbar = () => {
   const { theme, toggleTheme } = useTheme()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  // Handles nav link clicks on mobile: closes the drawer first,
+  // then scrolls to the target section once the collapse animation finishes.
+  // This avoids the race condition where the browser's native anchor jump
+  // fires while the drawer is still animating (which was causing it to
+  // land on the Home section instead of the clicked one).
+  const handleNavClick = (e, item) => {
+    e.preventDefault()
+    const targetId = item.toLowerCase()
+    setIsMenuOpen(false)
+    setTimeout(() => {
+      document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' })
+    }, 250) // must be >= drawer exit animation duration (0.2s)
+  }
+
   return (
    <div className='fixed w-full py-4 z-50 bg-theme-bg/85 backdrop-blur-md border-b border-theme-border/50 shadow-sm'>
         <div className='max-w-7xl mx-auto px-6'>
@@ -25,6 +39,7 @@ const Navbar = () => {
                 <a 
                   key={index} 
                   href={`#${item.toLowerCase()}`}
+                  onClick={(e) => handleNavClick(e, item)}
                   className='text-theme-text-sec hover:text-theme-accent font-semibold transition duration-300'
                 >
                   {item}
@@ -82,7 +97,7 @@ const Navbar = () => {
                   <a 
                     key={index} 
                     href={`#${item.toLowerCase()}`}
-                    onClick={() => setIsMenuOpen(false)}
+                    onClick={(e) => handleNavClick(e, item)}
                     className='text-theme-text-sec hover:text-theme-accent font-semibold py-2.5 text-lg border-b border-theme-border/30 last:border-b-0 min-h-[44px] flex items-center transition-colors duration-200'
                   >
                     {item}
@@ -104,4 +119,3 @@ const Navbar = () => {
 }
 
 export default Navbar
-
