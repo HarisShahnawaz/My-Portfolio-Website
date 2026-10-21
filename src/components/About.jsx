@@ -9,7 +9,7 @@ const About = () => {
       <div className='max-w-7xl mx-auto px-6'>
 
         {/* Heading */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -25,10 +25,10 @@ const About = () => {
 
         {/* Content Grid */}
         <div className='grid grid-cols-1 lg:grid-cols-12 gap-14 items-start'>
-          
+
           {/* Text Details & Timeline - Left Side */}
           <div className='lg:col-span-8 space-y-6'>
-            <motion.h3 
+            <motion.h3
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -38,7 +38,7 @@ const About = () => {
               Hi, I'm <span className='text-theme-accent font-orbitron'>Haris Shahnawaz</span> — a MERN Stack Developer who loves building high-performance, user-first web applications.
             </motion.h3>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -46,19 +46,19 @@ const About = () => {
               className='space-y-4 text-theme-text-sec text-base sm:text-lg leading-relaxed'
             >
               <p>
-                I am a passionate software engineer based in Pakistan, specialized in designing robust backend APIs with <strong>Node.js & Express</strong> and engineering responsive, animated user interfaces with <strong>React & Tailwind CSS</strong>.
+                I am a passionate software engineer based in Pakistan, specialized in designing robust backend APIs with <strong>Node.js & Express</strong> and engineering responsive, animated user interfaces with <strong>React & Tailwind CSS</strong>. I write my code in <strong>TypeScript</strong> for safer, more maintainable applications, with strong typing across components, APIs and data models.
               </p>
               <p>
                 My background in <strong>Information Technology</strong> has equipped me with a strong foundation in database architecture (MongoDB/Atlas), user authentication systems (JWT), real-time sockets (Socket.io), and cloud deployments.
               </p>
               <p className='text-theme-text font-semibold flex items-center gap-2'>
                 <span className='w-2 h-2 rounded-full bg-theme-accent animate-pulse'></span>
-                Currently focusing on: <span className='text-theme-accent'>Next.js, TypeScript, and Agentic AI integrations.</span>
+                Currently focusing on: <span className='text-theme-accent'>Next.js (App Router, SSR), TypeScript in real-world projects, and Agentic AI integrations.</span>
               </p>
             </motion.div>
 
             {/* Education Section */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -82,7 +82,7 @@ const About = () => {
                     University of Okara | 2022 — 2026
                   </div>
                   <div className='text-xs text-theme-text-muted mt-1'>
-                    CGPA: 3.62 / 4.00 • Focus: Software Development & Database Management
+                    CGPA: 3.57 / 4.00 • Focus: Software Development & Database Management
                   </div>
                 </div>
 
@@ -111,7 +111,7 @@ const About = () => {
             </motion.div>
 
             {/* Action buttons and socials */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -122,13 +122,13 @@ const About = () => {
                 <a href='/resume.pdf' target='_blank' rel='noreferrer' className='flex-1 sm:flex-initial'>
                   <button className='px-6 py-3.5 border border-theme-border text-theme-text rounded-full cursor-pointer hover:bg-theme-bg-sec hover:scale-[1.03] transition-all duration-200 font-semibold shadow-xs flex items-center justify-center gap-2 min-h-[44px] w-full'>
                     View Resume
-                    <FaArrowRight className='text-sm'/>
+                    <FaArrowRight className='text-sm' />
                   </button>
                 </a>
                 <a href='/resume.pdf' download='HarisShahnawaz-Resume.pdf' className='flex-1 sm:flex-initial'>
                   <button className='px-6 py-3.5 bg-theme-btn text-theme-btn-text rounded-full cursor-pointer hover:bg-theme-btn-hover hover:scale-[1.03] transition-all duration-200 font-semibold shadow-xs flex items-center justify-center gap-2 min-h-[44px] w-full'>
                     Download Resume
-                    <FaDownload className='text-sm'/>
+                    <FaDownload className='text-sm' />
                   </button>
                 </a>
               </div>
@@ -136,28 +136,28 @@ const About = () => {
               <div className='hidden sm:block h-6 w-px bg-theme-border'></div>
 
               <div className='flex items-center gap-4'>
-                <a 
-                  href='https://github.com/HarisShahnawaz' 
-                  target='_blank' 
-                  rel='noreferrer' 
+                <a
+                  href='https://github.com/HarisShahnawaz'
+                  target='_blank'
+                  rel='noreferrer'
                   className='p-3 border border-theme-border rounded-full hover:border-theme-border-focus hover:bg-theme-bg-sec text-theme-text-sec hover:text-theme-accent transition-all duration-200 flex items-center justify-center shadow-xs w-11 h-11'
                   aria-label="GitHub Profile"
                 >
                   <FaGithub className='text-lg' />
                 </a>
-                <a 
-                  href='https://www.linkedin.com/in/haris-shahnawaz-670aa8291/' 
-                  target='_blank' 
-                  rel='noreferrer' 
+                <a
+                  href='https://www.linkedin.com/in/haris-shahnawaz-670aa8291/'
+                  target='_blank'
+                  rel='noreferrer'
                   className='p-3 border border-theme-border rounded-full hover:border-theme-border-focus hover:bg-theme-bg-sec text-theme-text-sec hover:text-theme-accent transition-all duration-200 flex items-center justify-center shadow-xs w-11 h-11'
                   aria-label="LinkedIn Profile"
                 >
                   <FaLinkedin className='text-lg' />
                 </a>
-                <a 
-                  href='https://www.instagram.com/shahnawaz.haris/' 
-                  target='_blank' 
-                  rel='noreferrer' 
+                <a
+                  href='https://www.instagram.com/shahnawaz.haris/'
+                  target='_blank'
+                  rel='noreferrer'
                   className='p-3 border border-theme-border rounded-full hover:border-theme-border-focus hover:bg-theme-bg-sec text-theme-text-sec hover:text-theme-accent transition-all duration-200 flex items-center justify-center shadow-xs w-11 h-11'
                   aria-label="Instagram Profile"
                 >
@@ -189,7 +189,7 @@ const About = () => {
               </div>
               <pre className='text-teal-400 whitespace-pre-wrap select-none break-words'>
                 <code>
-{`{
+                  {`{
   "name": "Haris Shahnawaz",
   "role": "MERN Stack Developer",
   "passion": "Building scalable web apps",
@@ -203,9 +203,9 @@ const About = () => {
                 </code>
               </pre>
             </motion.div>
-            
+
             {/* Quick Stats Grid */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -235,4 +235,4 @@ const About = () => {
 }
 
 export default About
-
+

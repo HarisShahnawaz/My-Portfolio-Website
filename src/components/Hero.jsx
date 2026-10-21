@@ -34,9 +34,13 @@ const Hero = () => {
 
             <p className='text-lg text-theme-text-sec mb-8 max-w-lg mx-auto lg:mx-0 leading-7'>
               I build full-stack web applications from frontend to backend —
-              crafting responsive UIs with <strong className='text-theme-text'>React</strong> and powering
-              them with <strong className='text-theme-text'>Node.js</strong>, <strong className='text-theme-text'>Express</strong> &{' '}
-              <strong className='text-theme-text'>MongoDB</strong>.
+              crafting responsive UIs with <strong className='text-theme-text'>React</strong> and{' '}
+              <strong className='text-theme-text'>TypeScript</strong>, powering
+              them with <strong className='text-theme-text'>Node.js</strong>,{' '}
+              <strong className='text-theme-text'>Express</strong> &{' '}
+              <strong className='text-theme-text'>MongoDB</strong>, and now expanding
+              into <strong className='text-theme-text'>Next.js</strong> for fast,
+              production-ready apps.
             </p>
 
             {/* Buttons */}
@@ -64,8 +68,8 @@ const Hero = () => {
               >
                 <FaGithub className='text-2xl' />
               </a>
-              
-               <a href='https://www.linkedin.com/in/haris-shahnawaz-670aa8291/'
+
+              <a href='https://www.linkedin.com/in/haris-shahnawaz-670aa8291/'
                 target='_blank'
                 rel='noreferrer'
                 className='text-theme-text-muted hover:text-theme-accent transition duration-300'
@@ -99,7 +103,7 @@ const Hero = () => {
 
               {/* Stack badge */}
               <div className='absolute -top-4 -left-4 px-3 py-2 bg-theme-card border border-theme-border rounded-xl shadow-xs'>
-                <div className='text-xs font-semibold text-theme-text'>⚡ MERN Stack</div>
+                <div className='text-xs font-semibold text-theme-text'> MERN Stack</div>
               </div>
 
             </div>
